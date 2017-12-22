@@ -1,6 +1,9 @@
 class Game {
   constructor() {
     this.board = new Board();
+
+    Object.defineProperty
+
     this.snake = new Snake();
   }
   start() {

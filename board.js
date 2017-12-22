@@ -1,6 +1,6 @@
 class Board {
   constructor() {
-    
+      
   }
   createBoard() {
     const board = [];
