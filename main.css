@@ -1,0 +1,22 @@
+.board {
+  margin: 0 auto;
+  max-width: 500px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.board__tile {
+  width: 48px;
+  height: 48px;
+  background: red;
+  border: 1px solid black;
+}
+
+.board__snake {
+  background: black;
+}
+
+.board__food {
+  background: green;
+}
