@@ -1,3 +1,7 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 .board {
   margin: 0 auto;
   max-width: 500px;
@@ -7,10 +11,11 @@
 }
 
 .board__tile {
-  width: 48px;
-  height: 48px;
+  /* width: 48px; */
+  /* height: 48px; */
   background: red;
   border: 1px solid black;
+  box-sizing: border-box;
 }
 
 .board__snake {
