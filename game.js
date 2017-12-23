@@ -1,11 +1,19 @@
+import Board from './board.js';
+import Snake from './snake.js';
+
 class Game {
-  constructor() {
-    this.board = new Board();
+  constructor(board, snake) {
+    this.board = board;
+    this.snake = snake;
 
-    Object.defineProperty
 
-    this.snake = new Snake();
+    // this.board.tiles = [];
+    // console.log(this.board.tiles);
+
+    // this.board.tiles[0] = 'test';
+    // console.log(tiles);
   }
+
   start() {
     this.board.createBoard();
 
@@ -13,15 +21,21 @@ class Game {
       console.log(this.snake.currentDirection);
     }, 200);
   }
-  addListenters() {
+
+  addListeners() {
     document.addEventListener('keydown', event => {
-      if(event.key.includes('Arrow')) {
+      if (event.key.includes('Arrow')) {
         this.snake.currentDirection = event.key;
+        this.board.tiles = [0,0,1];
       }
     })
   }
 }
 
-const game = new Game();
+const board = new Board();
+const snake = new Snake();
+const game = new Game(board, snake);
 game.start();
-game.addListenters();
+game.addListeners();
+
+
